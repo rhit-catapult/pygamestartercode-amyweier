@@ -6,6 +6,7 @@ def main():
     pygame.init()
     pygame.display.set_caption("Moving Smile")
     screen = pygame.display.set_mode((640, 480))
+    #width comes before height
 
     while True:
         # TODO 4: Set the clock speed to 60 fps
@@ -32,6 +33,7 @@ def main():
         # TODO 1: Draw a nose
         # Suggestion: color (80,0,0) location (320,245), radius 10
         # API --> pygame.draw.circle(screen, (r,g,b), (x, y), radius, thickness)
+        pygame.draw.circle(screen, (0, 0, 80), (320, 245), 10,)
 
         # TODO 2: Draw a mouth
         # Suggestion: color (0,0,0), x 230, y 320, width 180, height 30
