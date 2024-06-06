@@ -21,7 +21,7 @@ def main():
             # TODO 3: Make the eye pupils move with Up, Down, Left, and Right keys
         pressed_keys = pygame.key.get_pressed()
         if pressed_keys[pygame.K_UP]:
-            y = y - 3
+            y = y - 2
         if pressed_keys[pygame.K_DOWN]:
             y = y + 3
         if pressed_keys[pygame.K_RIGHT]:
