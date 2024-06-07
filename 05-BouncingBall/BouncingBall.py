@@ -11,8 +11,12 @@ class Ball:
         self.radius = random.randint(10,50)
         self.x = random.randint(0 + self.radius, 600 - self.radius)
         self.y = random.randint(0 + self.radius, 1000 - self.radius)
-        self.speed_x = random.randint(5,10)
-        self.speedy = random.randint(5,10)
+        self.speed_x = random.randint(-10, 10)
+        while self.speed_x == 0:
+            self.speed_x = random.randint(-10,10)
+        self.speedy = random.randint(-10, 10)
+        while self.speedy == 0:
+            self.speedy = random.randint(-10,10)
 
     def move(self):
         self.x = self.x + self.speed_x
@@ -31,7 +35,7 @@ class Ball:
             self.y = 2*self.radius - self.y
 
     def draw(self):
-        pygame.draw.circle(self.screen, (0, 105, 150), (self.x, self.y), self.radius)
+        pygame.draw.circle(self.screen, (0, 0, 0), (self.x, self.y), self.radius)
 
 
 def main():
@@ -62,9 +66,9 @@ main()
 
 
 # Optional challenges (if you finish and want do play a bit more):
-#   After you get 1 ball working make a few balls (ball2, ball3, etc) that start in different places.
+#   DONE After you get 1 ball working make a few balls (ball2, ball3, etc) that start in different places.
 #   Make each ball a different color
-#   Make the screen 1000 x 800 to allow your balls more space (what needs to change?)
-#   Make the speed of each ball randomly chosen (1 to 5)
+#   DONE(ISH) Make the screen 1000 x 800 to allow your balls more space (what needs to change?)
+#   DONE (ISH) Make the speed of each ball randomly chosen (1 to 5)
 #   After you get that working try making a list of balls to have 100 balls (use a loop)!
 #   Use random colors for each ball
