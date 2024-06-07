@@ -1,30 +1,22 @@
-###############################################################################
-#
-#   Do this WITH YOUR INSTRUCTOR (live in class):
-#
-#   Read the code below.  Predict (in your head)
-#   what will get printed (i.e., displayed) when the code runs.
-#
-#   Then run this module by right clicking anywhere in this window
-#   and then selecting:
-#        Run 'name of file'
-#   (i.e.  Run 'm1e_comments_strings...')  Or, use the Windows keyboard
-#   shortcut:  Control + Shift + Function-F10.  (That is, hold the
-#   Control, Shift and Function keys down and press the F10 key.)
-#
-#   Confirm that you see the output in the  "Run"  window that appears.
-#     Note: I recommend that you click on the "Gear" symbol at the top-right
-#           part of that window and select
-#              Move to  ~  Right Top
-#           to make the output easier to see.
-#   Confirm that the output is what you expected, asking questions as desired.
-#
-###############################################################################
+import pygame
+import sys
+import random
+
+def main():
+    pygame.init()
+    screen = pygame.display.set_mode((1000, 600))
+    pygame.display.set_caption("Whack a Mole")
+    clock = pygame.time.Clock()
+
+    while True:
+        clock.tick(60)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+        screen.fill(pygame.Color('gray'))
 
 
-print("Hello, World")
-print("hi there")
-print("one", "two", "buckle my shoe")
 
-print(3 + 9)
-print("3 + 9", "versus", 3 + 9)
+    pygame.display.update()
+
+main()
